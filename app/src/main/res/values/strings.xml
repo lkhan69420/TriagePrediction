@@ -1,5 +1,26 @@
 <resources>
     <string name="app_name">TriagePrediction</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="inputform">INPUT FORM</string>
+    <string name="waitinglist">WAITING LIST</string>
+    <string name="hint">test</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="sex">Sex</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="arrems">Arrived by ambulance?</string>
+    <string name="temp">Body temperature (°C)</string>
+    <string name="pulse">Pulse rate (bpm)</string>
+    <string name="respr">Respiration rate</string>
+    <string name="sbp">Systolic blood pressure</string>
+    <string name="dbp">Diastolic blood pressure</string>
+    <string name="popct">Pulse oximetry</string>
+    <string name="nochron">Does the patient have any chronic illnesses?</string>
+    <string name="viewinfo">View patient information</string>
+    <string name="edit">Edit triage rating</string>
+    <string name="nowserving">Now Serving</string>
+    <string name="nextpatient">Next patient</string>
+    <string name="submit">submit</string>
 </resources>
