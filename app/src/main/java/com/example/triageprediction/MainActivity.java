@@ -10,12 +10,21 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.triageprediction.ui.main.PlaceholderFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
     private InputForm inputForm;
     private WaitingList waitingList;
+    private Fragment frag;
+
+//    private TextInputEditText name, age, temp, pulse, respr, sbp, dbp, popct;
+//    private CheckBox cebvd, chf, aids;
+//    private SwitchMaterial arrems, nochron;
+//    private RadioButton male, female;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,9 +101,10 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return fragmentTitle.get(position);
         }
+
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        ICUClassifier predictor = new ICUClassifier();
 //        String[] st = new String[581];
 //        st[0]="22.";
@@ -109,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 //        TextView t1, t2
 //        if (prediction == 1) System.out.println("Critical care unit");
 //        System.out.println(prediction);
-    }
+//    }
 
 }
 

@@ -17,6 +17,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<!--            Maybe use a listview instead?-->
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card"
                 android:layout_width="match_parent"

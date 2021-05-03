@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+    android:id="@+id/inputForm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.PlaceholderFragment">
@@ -18,12 +18,12 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
@@ -31,12 +31,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/age">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"/>
@@ -46,10 +46,11 @@
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="10dp"
+                android:textSize="16sp"
                 android:text="@string/sex" />
 
             <RadioGroup
@@ -62,14 +63,14 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                android:id="@+id/radio_button_1"
+                android:id="@+id/male"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:textSize="14sp"
                 android:text="@string/male"/>
 
                 <RadioButton
-                android:id="@+id/radio_button_2"
+                android:id="@+id/female"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:textSize="14sp"
@@ -94,13 +95,53 @@
                 android:textSize="16sp"
                 android:text="@string/nochron"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="-5dp"
+                android:text="@string/chron" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="16sp"
+                android:checkedButton="@+id/radio_button_1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cebvd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:text="@string/cebvd"/>
+
+                <CheckBox
+                    android:id="@+id/chf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:text="@string/chf"/>
+
+                <CheckBox
+                    android:id="@+id/aids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:text="@string/aids"/>
+
+            </RadioGroup>
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/temp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/temp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/temp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -108,12 +149,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/pulse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/pulse">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pulse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -121,12 +162,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/respr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/respr">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/respr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -134,12 +175,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sbp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/sbp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sbp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -147,12 +188,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/dbp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/dbp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dbp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -160,12 +201,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/popct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/popct">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/popct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"/>
@@ -173,10 +214,11 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/containedButton"
+                android:id="@+id/submit"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="readForm"
                 android:text="@string/submit"
                 />
 
