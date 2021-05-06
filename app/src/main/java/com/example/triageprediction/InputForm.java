@@ -22,7 +22,7 @@ public class InputForm extends Fragment {
     private CheckBox cebvd, chf, aids;
     private SwitchMaterial arrems, nochron;
     private RadioButton male, female;
-    static String[] input = new String[576];
+    static String[] input = new String[100];
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,14 +37,6 @@ public class InputForm extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ExploreFragment.
-     */
     // TODO: Rename and change types and number of parameters
 //    public static InputForm newInstance(String param1, String param2) {
 //        InputForm fragment = new InputForm();
@@ -70,6 +62,7 @@ public class InputForm extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
+
         name = view.findViewById(R.id.name);
         age = view.findViewById(R.id.age);
         male = view.findViewById(R.id.male);
@@ -92,16 +85,16 @@ public class InputForm extends Fragment {
             @Override
             public void onClick(View v) {
                 String Name = name.getText().toString();
-                input[0] = age.getText().toString()+".";
+                input[0] = age.getText().toString()+"."; //String array "input" contains patient information
                 if (male.isChecked()) input[1] = "0.";
                 else if (female.isChecked()) {
                     input[1] = "1.";
                 }
-                if (arrems.isChecked()) input[2] = "1.";
-                else input[2] = "0.";
+                if (arrems.isChecked()) input[2] = "1."; //If patient arrived by ambulance, return "1."
+                else input[2] = "0."; //If not, return "0." (the model will then read these and parse them into integers)
                 input[3] = ((Integer.parseInt(temp.getText().toString()) * (9 / 5)) + 32)+".";
 
-                input[4] = pulse.getText().toString()+".";
+                input[4] = pulse.getText().toString()+"."; //Numerical value, plus a decimal point at the end so the model can read it
 
                 input[5] = respr.getText().toString()+".";
 
@@ -123,10 +116,13 @@ public class InputForm extends Fragment {
                 if (nochron.isChecked()) input[12] = "0.";
                 else input[12] = "1.";
 
-                for (int i=13;i<581;i++) {
+                for (int i=13;i<100;i++) {
                     input[i] = "0.";
+                    /*The user will be able to choose between 87 different chief complaints. Since we haven't
+                    coded this feature yet, each complaint will temporarily be listed as "no".
+                     */
                 }
-                ICUClassifier predictor = new ICUClassifier();
+                CriticalCareClassifier predictor = new CriticalCareClassifier();
                 int prediction = predictor.predict(input);
                 if (prediction == 0) System.out.println("Not admitted");
                 if (prediction == 1) System.out.println("Admitted");
