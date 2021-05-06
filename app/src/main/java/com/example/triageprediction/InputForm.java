@@ -104,16 +104,17 @@ public class InputForm extends Fragment {
 
                 input[8] = popct.getText().toString()+".";
 
-                if (cebvd.isChecked()) input[9] = "1.";
+                if (cebvd.isChecked()) input[9] = "1."; //Has the patient previously been diagnosed with cerebrovascular disease?
                 else input[9] = "0.";
 
-                if (chf.isChecked()) input[10] = "1.";
+                if (chf.isChecked()) input[10] = "1."; ////Has the patient previously been diagnosed with congestive heart failure?
                 else input[10] = "0.";
 
-                if (aids.isChecked()) input[11] = "1.";
+                if (aids.isChecked()) input[11] = "1."; //Has the patient previously been diagnosed with HIV/AIDS?
                 else input[11] = "0.";
 
                 if (nochron.isChecked()) input[12] = "0.";
+                //Does the patient have any chronic illnesses? (the three listed above were the only 3 chronic illnesses included in the dataset)
                 else input[12] = "1.";
 
                 for (int i=13;i<100;i++) {
@@ -126,7 +127,6 @@ public class InputForm extends Fragment {
                 int prediction = predictor.predict(input);
                 if (prediction == 0) System.out.println("Not admitted");
                 if (prediction == 1) System.out.println("Admitted");
-//                TextView tv2 = v.findViewById(R.id.textView2);
             }
         });
 
