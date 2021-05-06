@@ -61,8 +61,7 @@ public class InputForm extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-
-
+        //Initialize form field elements
         name = view.findViewById(R.id.name);
         age = view.findViewById(R.id.age);
         male = view.findViewById(R.id.male);
@@ -79,19 +78,19 @@ public class InputForm extends Fragment {
         aids = view.findViewById(R.id.aids);
         nochron = view.findViewById(R.id.nochron);
 
-        Button button = view.findViewById(R.id.submit);
+        Button button = view.findViewById(R.id.submit); //Initialize "submit" button
 //
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() { //Listen for when the user clicks the submit button
             @Override
-            public void onClick(View v) {
-                String Name = name.getText().toString();
+            public void onClick(View v) { //When the user clicks the submit button, execute this code (get information from fields)
+                String Name = name.getText().toString(); //Get patient name
                 input[0] = age.getText().toString()+"."; //String array "input" contains patient information
-                if (male.isChecked()) input[1] = "0.";
+                if (male.isChecked()) input[1] = "0."; //If patient is male, return "0."
                 else if (female.isChecked()) {
-                    input[1] = "1.";
+                    input[1] = "1."; //If patient is female, return "1." (the model will then read these and parse them into integers)
                 }
                 if (arrems.isChecked()) input[2] = "1."; //If patient arrived by ambulance, return "1."
-                else input[2] = "0."; //If not, return "0." (the model will then read these and parse them into integers)
+                else input[2] = "0."; //If not, return "0."
                 input[3] = ((Integer.parseInt(temp.getText().toString()) * (9 / 5)) + 32)+".";
 
                 input[4] = pulse.getText().toString()+"."; //Numerical value, plus a decimal point at the end so the model can read it
