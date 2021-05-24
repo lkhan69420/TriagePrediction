@@ -26,6 +26,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

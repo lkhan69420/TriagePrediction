@@ -47,7 +47,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/name"
+                            android:id="@+id/patientname"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
 
@@ -55,7 +55,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="Critical care unit"
+                            android:id="@+id/designation"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
 
@@ -79,6 +79,7 @@
                             style="?attr/borderlessButtonStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:id="@+id/nextpatient"
                             android:text="@string/nextpatient" />
                     </LinearLayout>
 
@@ -86,64 +87,123 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp">
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/card2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="8dp">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
 
-                        <!-- Title, secondary and supporting text -->
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/name"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
+<!--                        &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Patient 3"-->
+<!--                            android:textAppearance="?attr/textAppearanceHeadline6" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Triage rating"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary" />
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:text="Critical care unit"-->
+<!--                            android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                            android:textColor="?android:attr/textColorSecondary" />-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
-                    <!-- Buttons -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:orientation="horizontal">
+<!--                    &lt;!&ndash; Buttons &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        android:orientation="horizontal">-->
 
-                        <com.google.android.material.button.MaterialButton
-                            style="?attr/borderlessButtonStyle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/viewinfo" />
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            style="?attr/borderlessButtonStyle"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="@string/viewinfo" />-->
 
-                        <com.google.android.material.button.MaterialButton
-                            style="?attr/borderlessButtonStyle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/edit" />
-                    </LinearLayout>
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            style="?attr/borderlessButtonStyle"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/edit" />-->
+<!--                    </LinearLayout>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
-            </com.google.android.material.card.MaterialCardView>
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/card3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="8dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp">-->
+
+<!--                        &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Patient 2"-->
+<!--                            android:textAppearance="?attr/textAppearanceHeadline6" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:text="Other hospitalization"-->
+<!--                            android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                            android:textColor="?android:attr/textColorSecondary" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    &lt;!&ndash; Buttons &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            style="?attr/borderlessButtonStyle"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="@string/viewinfo" />-->
+
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            style="?attr/borderlessButtonStyle"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/edit" />-->
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
 
         </LinearLayout>
 

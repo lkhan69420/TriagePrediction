@@ -17,7 +17,7 @@
     <string name="sbp">Systolic blood pressure</string>
     <string name="dbp">Diastolic blood pressure</string>
     <string name="popct">Pulse oximetry</string>
-    <string name="nochron">Does the patient have any chronic illnesses?</string>
+    <string name="nochron">Does the patient have any chronic illnesses (including the ones listed below)?</string>
     <string name="viewinfo">View patient info</string>
     <string name="edit">Edit triage rating</string>
     <string name="nowserving">Now Serving</string>
@@ -27,4 +27,10 @@
     <string name="cebvd">Cerebrovascular disease</string>
     <string name="chf">Congestive heart failure</string>
     <string name="aids">HIV/AIDS</string>
+    <string-array name="RFVs">
+        <item>Why</item>
+        <item>are</item>
+        <item>you</item>
+        <item>gay?</item>
+    </string-array>
 </resources>
